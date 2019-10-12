@@ -1,0 +1,12 @@
+    string buf;
+    ofstream fout("D:\\123.txt");  //把转换好的字符串写入文件
+    fout<<str;
+    fout.close ();
+    ifstream fin("D:\\123.txt");  //读出写入的字符串并排序
+    while(fin>>buf){
+        value(buf)++;
+    }
+    vector<WORD>::const_iterator p;  //迭代器访问元素
+    ofstream output("D:\\Result1.txt");  //定义输出文件名
+    for(p=a.begin();p!=a.end();++p)
+        output<<p->word<<":"<<p->num<<'\n';  //将结果输出保存到Result1.txt中
